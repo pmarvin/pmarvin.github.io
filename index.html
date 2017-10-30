@@ -192,37 +192,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Startseite
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-about">
-          <a href="/about/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-            
-            Über
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            Tags
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-categories">
-          <a href="/categories/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
-            
-            Kategorien
+            Home
           </a>
         </li>
       
@@ -232,37 +202,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archiv
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-schedule">
-          <a href="/schedule/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-calendar"></i> <br />
-            
-            Schedule
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-sitemap">
-          <a href="/sitemap.xml" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br />
-            
-            Sitemap
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-commonweal">
-          <a href="/404/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
-            
-            Commonweal 404
+            Archives
           </a>
         </li>
       
@@ -328,7 +268,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-10-28T12:14:15+08:00">
                 2017-10-28
@@ -370,68 +310,24 @@
       
         
           
-            <h1 id="A电脑"><a href="#A电脑" class="headerlink" title="A电脑"></a>A电脑</h1><p>本地 D:\Hexo</p>
-<p>git init</p>
-<p>git add .</p>
-<p>git commit -m “配置文件”</p>
-<p>新建hexo分支（github网就出现名称为hexo的新的分支）</p>
-<p>git branch hexo</p>
-<p>切换到hexo分支上</p>
-<p>git checkout hexo</p>
-<p>将本地与Github项目对接</p>
-<p>git remote add origin git@github.com:pmarvin/pmarvin.github.io.git</p>
-<p>push到Github项目的hexo分支上</p>
-<p>git push origin hexo</p>
-<p>注意：hexo分支备份配置文件<br>结果：</p>
-<p><img src="https://i.imgur.com/ZA053JY.png" alt=""></p>
-<blockquote>
-<p>需要设置hexo为默认分支（Github官网）</p>
-</blockquote>
-<h1 id="B电脑"><a href="#B电脑" class="headerlink" title="B电脑"></a>B电脑</h1><p>安装了Node.js,Git,Hexo环境 </p>
-<p>完成Github与本地Hexo的对接 </p>
-<p><a href="https://xuanwo.org/2015/03/26/hexo-intor/" target="_blank" rel="external">https://xuanwo.org/2015/03/26/hexo-intor/</a></p>
-<p>F:\Hexo<br>git clone -b hexo git@github.com:pmarvin/pmarvin.github.io.git //将Github中hexo分支clone到本地</p>
-<p><img src="https://i.imgur.com/F1wadtU.png" alt=""></p>
-<p>cd  pmarvin.github.io  //切换到刚刚clone的文件夹内设置</p>
-<p>然后拷贝出F：\Hexo\pmarvin.github.io 文件夹下的.git文件夹</p>
-<p>依次执行cnpm install 和 cnpm install hexo-deployer-git（此时当前分支应显示为hexo）</p>
-<p>然后再将.git文件夹粘贴回去</p>
-<p>修改_config.yml中的deploy参数，分支应为master</p>
-<p>依次执行git add .、git commit -m “…”、git push origin hexo提交网站相关的文件</p>
-<p>执行hexo generate -d生成网站并部署到GitHub上。</p>
-<hr>
-<p>不同终端间愉快地玩耍</p>
-<p>在公司电脑D：\hexo目录下执行</p>
-<p>git pull origin hexo</p>
-<p>这样在家里发布的文章md文件，就在公司电脑d:\hexo\source文件夹中同步下来了。</p>
-<p>用公司电脑新建文章 md</p>
-<p>hexo new post “ new blog name”</p>
-<p>然后依次执行</p>
-<p>git add .</p>
-<p>git commit -m “公司电脑写的文章”</p>
-<p>git push origin hexo</p>
-<p>hexo d -g</p>
-<p>在家里电脑F:\Hexo\pmarvin.github.io目录下执行</p>
-<p>git pull origin hexo  这样在家里发布的文章md文件，就在公司电脑d:\hexo\source文件夹中同步下来了。</p>
-<p>用家里电脑新建文章 md</p>
-<p>hexo new post “ new blog name”</p>
-<p>然后依次执行</p>
-<p>git add .</p>
-<p>git commit -m “”</p>
-<p>git push origin hexo</p>
-<p>hexo d -g</p>
-<p>删除文章<br>直接在source_posts中删除，然后再hexo d -g</p>
-<p>如果要修改配置文件，直接在Github官网中的hexo下修改。或者在家里电脑中配置好，再走一遍hexo配置文件备份流程</p>
-<p>hexo的next主题个性化教程：打造炫酷网站</p>
-<p><a href="http://www.jianshu.com/p/0b1fccce74e0" target="_blank" rel="external">http://www.jianshu.com/p/0b1fccce74e0</a></p>
-<p><a href="http://blog.csdn.net/qq_33699981/article/details/72716951" target="_blank" rel="external">http://blog.csdn.net/qq_33699981/article/details/72716951</a></p>
-<p>克隆主题</p>
-<p>git clone <a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="external">https://github.com/iissnan/hexo-theme-next</a> themes/next</p>
-<p>Next 主题官网 <a href="http://theme-next.iissnan.com/" target="_blank" rel="external">http://theme-next.iissnan.com/</a></p>
-<p>更新主题</p>
-<p>git pull</p>
-
-          
+          A电脑本地 D:\Hexo
+git init
+git add .
+git commit -m “配置文件”
+新建hexo分支（github网就出现名称为hexo的新的分支）
+git branch hexo
+切换到hexo分支上
+git checkout hexo
+将本地与Github项目对接
+git
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/10/28/Hexo+Github 多PC端写博客解决方案/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -516,7 +412,7 @@
                 <a href="/archives/">
               
                   <span class="site-state-item-count">1</span>
-                  <span class="site-state-item-name">Artikel</span>
+                  <span class="site-state-item-name">posts</span>
                 </a>
               </div>
             
@@ -568,7 +464,7 @@
 </div>
 
 
-  <div class="powered-by">Erstellt mit  <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
 
 
 
