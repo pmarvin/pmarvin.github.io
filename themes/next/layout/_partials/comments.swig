@@ -67,5 +67,7 @@
       <div id="vcomments"></div>
     </div>
   {% endif %}
-
+{% elseif theme.changyan_appid and theme.changyan_appkey %}
+        <div id="SOHUCS" ></div>
+		
 {% endif %}

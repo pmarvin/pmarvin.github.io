@@ -84,14 +84,20 @@ index_with_subtitle: false
 # Value before `||` delimeter is the target link.
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, question icon will be loaded.
 menu:
-  首页: / || home
-  #about: /about/ || user
-  #tags: /tags/ || tags
-  #categories: /categories/ || th
-  #archives: /archives/ || archive
+  首页: / || home 
+  标签: /tags/ || tags
+  分类: /categories/ || th
+  归档: /archives/ || archive
+  #关于: /about/ || user
   #schedule: /schedule/ || calendar
   #sitemap: /sitemap.xml || sitemap
   #commonweal: /404/ || heartbeat
+  
+search:
+  path: search.xml
+  field: post
+  format: html
+  limit: 10000
 
 # Enable/Disable menu icons.
 menu_icons:
@@ -222,16 +228,15 @@ post_meta:
 # Dependencies: https://github.com/willin/hexo-wordcount
 post_wordcount:
   item_text: true
-  wordcount: false
-  min2read: false
-  totalcount: false
-  separated_meta: true
-
+  wordcount: true
+  min2read: true
+  #totalcount: true
+  #separated_meta: true
 # Wechat Subscriber
 wechat_subscriber:
   enabled: true
   qcode: https://i.imgur.com/lmz7NmC.jpg
-  description: 欢迎您扫一扫上面的微信公众号二维码，订阅我的个人公众号！
+  description: 欢迎您扫一扫上面的二维码，订阅我的个人公众号！
 
 # Reward
 reward_comment: 真诚赞赏，手留余香
@@ -334,8 +339,8 @@ font:
 
 # MathJax Support
 mathjax:
-  enable: false
-  per_page: false
+  enable: true
+  per_page: true
   cdn: //cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML
 
 # Han Support docs: https://hanzi.pro/
@@ -354,18 +359,16 @@ baidu_analytics: 7cdfadc534d140d55ae01e65ddf2168e
 disqus:
   enable: false
   shortname:
-  count: true
+  count: false
 
 # Hypercomments
 #hypercomments_id:
 
 # changyan
 changyan:
-  enable: false
-  appid:
-  appkey:
-
-
+  enable: true
+  appid: cytibD3KN
+  appkey: 66e2c414e7c92ca8b6f8877b3c894ac3
 # Valine.
 # You can get your appid and appkey from https://leancloud.cn
 # more info please open https://github.com/xCss/Valine
@@ -393,7 +396,7 @@ gitment:
   count: true # Show comments count in post meta area
   lazy: false # Comments lazy loading with a button
   cleanly: false # Hide 'Powered by ...' on footer, and more
-  language: # Force language, or auto switch by theme
+  language: zh-CN
   github_user: # MUST HAVE, Your Github ID
   github_repo: # MUST HAVE, The repo you use to store Gitment comments
   client_id:   # MUST HAVE, Github client id for the Gitment
@@ -405,8 +408,8 @@ gitment:
 # Available value:
 #    button | slide
 # Warning: Baidu Share does not support https.
-#baidushare:
-##  type: button
+baidushare: 
+  type: button
 
 # Share
 # This plugin is more useful in China, make sure you known how to use it.
@@ -417,7 +420,7 @@ gitment:
 #add_this_id:
 
 # Share
-#duoshuo_share: true
+duoshuo_share: true
 
 # NeedMoreShare2
 # This plugin is a pure javascript sharing lib which is useful in China.
@@ -672,7 +675,7 @@ pace: false
 pace_theme: pace-theme-minimal
 
 # Canvas-nest
-canvas_nest: false
+canvas_nest: true
 
 # three_waves
 three_waves: false
@@ -788,3 +791,6 @@ images: images
 
 # Theme version
 version: 5.1.3
+
+passage_end_tag:
+  enabled: true
